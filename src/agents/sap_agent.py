@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# TODO: replace with actual SAP RFC calls
+# TODO: replace this with actual SAP RFC calls ( in production/ reallife)
 SAP_DATA_PATH = "./data/raw/sap_maintenance.csv"
 
 

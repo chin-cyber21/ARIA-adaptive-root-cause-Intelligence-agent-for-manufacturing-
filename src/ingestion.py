@@ -6,7 +6,7 @@ from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader, CSVLoader
 
-# 500 worked better than 1000 in testing - less noise in results
+# 500 worked better than 1000, less noise in results
 # 50 overlap so we don't lose context at boundaries
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
@@ -71,7 +71,7 @@ def load_and_chunk_all(data_folder: str = "./data/raw") -> List[Document]:
         all_docs.extend(defect_docs)
         print(f"Defect records: {len(defect_docs)} rows loaded")
 
-    # SAP maintenance history - mocked for now
+    # SAP maintenance history mocked for now
     # TODO: replace with live SAP RFC call in production
     sap_path = os.path.join(data_folder, "sap_maintenance.csv")
     if os.path.exists(sap_path):
@@ -79,7 +79,7 @@ def load_and_chunk_all(data_folder: str = "./data/raw") -> List[Document]:
         all_docs.extend(sap_docs)
         print(f"SAP records: {len(sap_docs)} rows loaded")
 
-    # PDFs - maintenance manuals if available
+    # PDFs maintenance manuals if present
     manuals_path = os.path.join(data_folder, "maintenance_manuals")
     if os.path.exists(manuals_path):
         pdf_docs = load_pdfs(manuals_path)
