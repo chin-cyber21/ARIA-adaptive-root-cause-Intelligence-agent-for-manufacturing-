@@ -10,12 +10,12 @@ I have built this project for manufacturing usecase as most of the ai tools in t
 
 Aria cosnsit of 6 different agents/ functions orchestrated via LangGraph, each agent has its role and intent as follows: 
 
-- a. classifier : Figures out the user query intent 
-- b. Retrieval : makes a hybrid search ( BM25 keyword + semantic ) over machine records 
-- c. Sap Connector: custom tools based agent created to fetch real data (workcase demonstrated with syntetic data in mvp) and perform operation/ tool calling based on intent. 
-- d. Reasoning: deep analysis for complex root cause queries via user
-- e. Escalationn: Decides the priority of situation based on confidence and stock levels 
-- f. Synthesis: Generates the final structured output answer with relevant confidence score
+- classifier : Figures out the user query intent 
+- Retrieval : makes a hybrid search ( BM25 keyword + semantic ) over machine records 
+- Sap Connector: custom tools based agent created to fetch real data (workcase demonstrated with syntetic data in mvp) and perform operation/ tool calling based on intent. 
+- Reasoning: deep analysis for complex root cause queries via user
+- Escalationn: Decides the priority of situation based on confidence and stock levels 
+- Synthesis: Generates the final structured output answer with relevant confidence score
 
 state flows through all agents via shared TypeDict (LangGraph)
 
