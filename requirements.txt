@@ -1,0 +1,29 @@
+# LangChain core
+langchain
+langchain-community
+langchain-google-genai
+
+# LangGraph
+langgraph
+
+# Vector store
+chromadb
+
+# Hybrid search
+rank-bm25
+
+# Embeddings
+sentence-transformers
+
+# API
+fastapi
+uvicorn
+
+# Evaluation
+ragas
+datasets
+
+# Utilities
+python-dotenv
+pydantic
+pandas

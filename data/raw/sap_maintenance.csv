@@ -1,0 +1,6 @@
+machine_id	last_maintenance	open_work_orders	bearing_stock	hydraulic_stock	status
+M001	15-01-2024	2	5	8	critical
+M002	01-02-2024	0	12	15	normal
+M003	10-12-2023	4	2	3	critical
+M004	10-02-2024	1	8	10	normal
+M005	20-11-2023	6	1	2	critical
